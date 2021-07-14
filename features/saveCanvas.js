@@ -90,7 +90,7 @@ function showImgCanvasDefaut() {
 //mở cửa sổ nhập tên tác phẩm
 function toggleSaveTable() {
     name_canvas.classList.add('active');
-    blur.classList.add('active');
+    blur.style.filter = 'blur(5px)';
 }
 
 // đóng cửa sổ bảng lưu từ bên ngoài body
@@ -116,7 +116,8 @@ function closeFormSaveTable() {
         input_name.value = '';
     }
     name_canvas.classList.remove('active');
-    blur.classList.remove('active');
+    blur.style.filter = 'blur(0px)';
+    blur.setAttribute('style', '');
     error_input.innerHTML = '&nbsp;';
     input_name.classList.remove('active');
 }
