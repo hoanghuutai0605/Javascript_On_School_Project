@@ -43,8 +43,9 @@ function getValue(val) {
                 } else if (val === '1') {
                     arrImgs2 = dataImg;
                 }
-                getDataImgUrl(arrImgs1, arrImgs2);
+                
                 setTimeout(function(){
+                    getDataImgUrl(arrImgs1, arrImgs2);
                     hideLoadingCanvas();
                 },3000)
             },
